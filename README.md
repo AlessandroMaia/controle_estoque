@@ -1,4 +1,4 @@
-# controle_estoque_e_pessoal
+# Projeto de Controle de Produtos e Pessoal
 
 Projeto básico de controle de estoque de produtos, funcionários e fornecedores.
 
