@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="332.0" prefWidth="448.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.alessandro.viewlogin.TelaLoginController">
+    <stylesheets>
+        <URL value="@/br/com/alessandro/css/telalogin.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="36.0" layoutY="171.0" text="LOGIN:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="230.0" text="SENHA:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button id="btnSair" fx:id="btnSair" layoutX="233.0" layoutY="281.0" mnemonicParsing="false" onAction="#BotaoSair" prefHeight="40.0" prefWidth="113.0" text="SAIR" />
+      <PasswordField id="lblSenha" fx:id="lblSenha" layoutX="134.0" layoutY="225.0" prefHeight="40.0" prefWidth="285.0" />
+      <TextField id="lblLogin" fx:id="lblLogin" layoutX="134.0" layoutY="166.0" prefHeight="40.0" prefWidth="285.0" />
+      <Button id="btnEntrar" fx:id="btnEntrar" layoutX="91.0" layoutY="281.0" mnemonicParsing="false" onAction="#BotaoEntrar" prefHeight="40.0" prefWidth="113.0" text="ENTRAR" />
+      <ImageView fitHeight="145.0" fitWidth="198.0" layoutX="152.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagens/icone-login.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

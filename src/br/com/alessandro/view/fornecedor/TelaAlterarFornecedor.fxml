@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="443.0" prefWidth="699.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.alessandro.view.fornecedor.TelaAlterarFornecedorController">
+    <stylesheets>
+        <URL value="@/br/com/alessandro/css/telaalterarfornecedor.css" />
+    </stylesheets>
+    <children>
+        <Label layoutX="119.0" layoutY="14.0" prefHeight="56.0" prefWidth="459.0" text="Alteração de Dados de Fornecedor">
+            <font>
+                <Font name="Bangla MN" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="12.0" layoutY="153.0" text="Nome Fantasia: ">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <TextField fx:id="lblAlteraRazaoSocial" layoutX="133.0" layoutY="87.0" prefHeight="36.0" prefWidth="418.0" />
+        <ImageView fitHeight="102.0" fitWidth="128.0" layoutX="568.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../imagens/icone-fornecedor.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="12.0" layoutY="93.0" text="Razão Social:">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <TextField fx:id="lblAlteraNomeFantasia" layoutX="151.0" layoutY="146.0" prefHeight="36.0" prefWidth="400.0" />
+        <RadioButton fx:id="checkPessoaF" contentDisplay="BOTTOM" layoutX="562.0" layoutY="140.0" mnemonicParsing="false" onAction="#checkPessoaFis" text="Pess. Física">
+            <toggleGroup>
+                <ToggleGroup fx:id="TipoDePessoa" />
+            </toggleGroup>
+            <font>
+                <Font size="15.0" />
+            </font>
+        </RadioButton>
+        <RadioButton fx:id="checkPessoaJ" layoutX="562.0" layoutY="164.0" mnemonicParsing="false" onAction="#checkPessoaJur" text="Pess. Jurídica">
+            <toggleGroup>
+                <ToggleGroup fx:id="TipoDePessoa" />
+            </toggleGroup>
+            <font>
+                <Font size="15.0" />
+            </font>
+        </RadioButton>
+        <Label layoutX="12.0" layoutY="210.0" text="CNPJ/CPF:">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <TextField fx:id="lblAlteraCnpj" layoutX="112.0" layoutY="205.0" prefHeight="36.0" prefWidth="265.0" />
+        <Label layoutX="384.0" layoutY="212.0" text="IE: ">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <TextField fx:id="lblAlteraIe" layoutX="419.0" layoutY="205.0" prefHeight="36.0" prefWidth="258.0" />
+        <Label layoutX="12.0" layoutY="271.0" text="End.:">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="12.0" layoutY="330.0" text="Bairro:">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="398.0" layoutY="330.0" text="Telefone:">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <TextField fx:id="lblAlteraEndereco" layoutX="63.0" layoutY="264.0" prefHeight="36.0" prefWidth="387.0" />
+        <TextField fx:id="lblAlteraBairro" layoutX="72.0" layoutY="323.0" prefHeight="36.0" prefWidth="203.0" />
+        <TextField fx:id="lblAlteraTelefone" layoutX="489.0" layoutY="323.0" prefHeight="36.0" prefWidth="188.0" />
+        <Label layoutX="283.0" layoutY="332.0" text="Est.:">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <TextField fx:id="lblAlteraEstado" layoutX="336.0" layoutY="323.0" prefHeight="36.0" prefWidth="51.0" />
+        <Label layoutX="461.0" layoutY="273.0" text="CEP:">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <TextField fx:id="lblAlteraCep" layoutX="509.0" layoutY="264.0" prefHeight="36.0" prefWidth="160.0" />
+        <Button layoutX="227.0" layoutY="382.0" mnemonicParsing="false" onAction="#btnAlterarFornecedor" prefHeight="45.0" prefWidth="113.0" text="ALTERAR" />
+        <Button layoutX="365.0" layoutY="382.0" mnemonicParsing="false" onAction="#btnCancelarAlterarFornecedor" prefHeight="45.0" prefWidth="113.0" text="CANCELAR" />
+    </children>
+</AnchorPane>

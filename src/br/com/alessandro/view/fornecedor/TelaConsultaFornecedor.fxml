@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="443.0" prefWidth="699.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.alessandro.view.fornecedor.TelaConsultaFornecedorController">
+    <stylesheets>
+        <URL value="@/br/com/alessandro/css/telaconsultafornecedor.css" />
+    </stylesheets>
+    <children>
+        <Label layoutX="130.0" layoutY="8.0" prefHeight="56.0" prefWidth="459.0" text="Consulta de Dados de Fornecedor">
+            <font>
+                <Font name="Bangla MN" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="23.0" layoutY="147.0" text="Nome Fantasia: ">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <TextField fx:id="lblConsultaRazaoSocial" editable="false" layoutX="144.0" layoutY="81.0" prefHeight="36.0" prefWidth="418.0" />
+        <ImageView fitHeight="102.0" fitWidth="128.0" layoutX="579.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../imagens/icone-fornecedor.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="23.0" layoutY="87.0" text="Razão Social:">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <TextField fx:id="lblConsultaNomeFantasia" editable="false" layoutX="162.0" layoutY="140.0" prefHeight="36.0" prefWidth="400.0" />
+        <RadioButton fx:id="CheckFis" contentDisplay="BOTTOM" disable="true" layoutX="573.0" layoutY="134.0" mnemonicParsing="false" text="Pess. Física">
+            <toggleGroup>
+                <ToggleGroup fx:id="TipoDePessoa" />
+            </toggleGroup>
+            <font>
+                <Font size="15.0" />
+            </font>
+        </RadioButton>
+        <RadioButton fx:id="CheckJur" disable="true" layoutX="573.0" layoutY="158.0" mnemonicParsing="false" text="Pess. Jurídica">
+            <toggleGroup>
+                <ToggleGroup fx:id="TipoDePessoa" />
+            </toggleGroup>
+            <font>
+                <Font size="15.0" />
+            </font>
+        </RadioButton>
+        <Label layoutX="23.0" layoutY="204.0" text="CNPJ/CPF:">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <TextField fx:id="lblConsultaCNPJ" editable="false" layoutX="123.0" layoutY="199.0" prefHeight="36.0" prefWidth="265.0" />
+        <Label layoutX="395.0" layoutY="206.0" text="IE: ">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <TextField fx:id="lblConsultaIE" editable="false" layoutX="430.0" layoutY="199.0" prefHeight="36.0" prefWidth="258.0" />
+        <Label layoutX="23.0" layoutY="265.0" text="End.:">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="23.0" layoutY="324.0" text="Bairro:">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="409.0" layoutY="324.0" text="Telefone:">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <TextField fx:id="lblCOnsultaEnd" editable="false" layoutX="74.0" layoutY="258.0" prefHeight="36.0" prefWidth="387.0" />
+        <TextField fx:id="lblConsultaBairro" editable="false" layoutX="83.0" layoutY="317.0" prefHeight="36.0" prefWidth="203.0" />
+        <TextField fx:id="lblConsultaTelefone" editable="false" layoutX="500.0" layoutY="317.0" prefHeight="36.0" prefWidth="188.0" />
+        <Label layoutX="294.0" layoutY="326.0" text="Est.:">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <TextField fx:id="lblConsultaEstado" editable="false" layoutX="347.0" layoutY="317.0" prefHeight="36.0" prefWidth="51.0" />
+        <Label layoutX="472.0" layoutY="267.0" text="CEP:">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <TextField fx:id="lblConsultaCep" editable="false" layoutX="520.0" layoutY="258.0" prefHeight="36.0" prefWidth="160.0" />
+        <Button layoutX="316.0" layoutY="374.0" mnemonicParsing="false" onAction="#btnSairConsultaFornecedor" prefHeight="45.0" prefWidth="113.0" text="SAIR" />
+        <Label layoutX="36.0" layoutY="380.0" text="ID:">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label fx:id="lblIDForn" layoutX="67.0" layoutY="380.0" prefHeight="23.0" prefWidth="110.0">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="644.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.alessandro.view.telaInicial.TelaInicialController">
+    <stylesheets>
+        <URL value="@/br/com/alessandro/css/telainicial.css" />
+    </stylesheets>
+    <tabs>
+        <Tab fx:id="abaFuncionario" text="Funcionários">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <TableView fx:id="TbFuncionario" layoutX="7.0" layoutY="118.0" prefHeight="271.0" prefWidth="631.0">
+                            <columns>
+                                <TableColumn fx:id="IDFuncionario" prefWidth="42.0" text="ID" />
+                                <TableColumn fx:id="NomeFuncionario" prefWidth="173.0" text="NOME" />
+                                <TableColumn fx:id="CpfFuncionario" prefWidth="169.0" text="CPF" />
+                                <TableColumn fx:id="SexoFuncionario" minWidth="1.0" prefWidth="45.0" text="SEXO" />
+                                <TableColumn fx:id="TelFucnionario" prefWidth="184.0" text="TELEFONE" />
+                            </columns>
+                        </TableView>
+                        <TextField fx:id="txtBuscarFunc" layoutX="137.0" layoutY="69.0" prefHeight="27.0" prefWidth="249.0" promptText="Pesquisar por nome..." />
+                        <Button layoutX="386.0" layoutY="69.0" mnemonicParsing="false" onAction="#btnBuscarFunc" prefHeight="27.0" prefWidth="78.0" text="BUSCAR" />
+                        <ButtonBar layoutX="26.0" layoutY="14.0" prefHeight="40.0" prefWidth="505.0">
+                            <buttons>
+                                <Button mnemonicParsing="false" onAction="#CadastrarNovoFuncionario" prefHeight="27.0" prefWidth="107.0" text="NOVO" />
+                                <Button minWidth="59.0" mnemonicParsing="false" onAction="#ConsultaFuncionario" prefHeight="27.0" prefWidth="107.0" text="CONSULTAR" />
+                                <Button mnemonicParsing="false" onAction="#AlterarFuncionario" prefWidth="107.0" text="ALTERAR" />
+                                <Button mnemonicParsing="false" onAction="#DeletarFuncionario" prefHeight="27.0" prefWidth="107.0" text="EXCLUIR" />
+                            </buttons>
+                        </ButtonBar>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab fx:id="AbaProduto" text="Produto">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <TextField fx:id="txtBuscarProd" layoutX="137.0" layoutY="69.0" prefHeight="27.0" prefWidth="249.0" promptText="Pesquisar por nome..." />
+                        <Button layoutX="386.0" layoutY="69.0" mnemonicParsing="false" onAction="#btnBuscarProd" prefHeight="27.0" prefWidth="78.0" text="BUSCA" />
+                        <TableView fx:id="TbProduto" layoutX="7.0" layoutY="118.0" prefHeight="271.0" prefWidth="631.0">
+                            <columns>
+                                <TableColumn fx:id="tbIdPro" prefWidth="50.0" text="ID" />
+                                <TableColumn fx:id="tbNomePro" prefWidth="190.0" text="NOME" />
+                                <TableColumn fx:id="tbQtdPro" prefWidth="47.0" text="QTD" />
+                                <TableColumn fx:id="tbViewMarca" minWidth="0.0" prefWidth="144.0" text="MARCA" />
+                                <TableColumn fx:id="tbViewFornPro" minWidth="0.0" prefWidth="176.0" text="FORNECEDOR" />
+                            </columns>
+                        </TableView>
+                        <ButtonBar layoutX="86.0" layoutY="14.0" prefHeight="40.0" prefWidth="388.0">
+                            <buttons>
+                                <Button mnemonicParsing="false" onAction="#CadastrarNovoProduto" prefHeight="27.0" prefWidth="107.0" text="NOVO" />
+                                <Button mnemonicParsing="false" onAction="#AlterarProduto" prefHeight="27.0" prefWidth="107.0" text="ALTERAR" />
+                                <Button mnemonicParsing="false" onAction="#DeletarProduto" prefWidth="107.0" text="EXCLUIR" />
+                            </buttons>
+                        </ButtonBar>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab fx:id="AbaFornecedores" text="Fornecedores">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="429.0" prefWidth="672.0">
+                    <children>
+                        <TableView fx:id="TbFornecedor" layoutX="7.0" layoutY="118.0" prefHeight="271.0" prefWidth="631.0">
+                            <columns>
+                                <TableColumn fx:id="IDFornecedor" prefWidth="37.0" text="ID" />
+                                <TableColumn fx:id="FantasiaForncedor" prefWidth="185.0" text="NOME FANTASIA" />
+                                <TableColumn fx:id="CPNJFornecedor" prefWidth="154.0" text="CPNJ" />
+                                <TableColumn fx:id="TelFornecedor" minWidth="1.0" prefWidth="150.0" text="TELEFONE" />
+                                <TableColumn fx:id="PessoaFornecedor" prefWidth="82.0" text="PESSOA" />
+                            </columns>
+                        </TableView>
+                        <TextField fx:id="txtBuscarForn" layoutX="137.0" layoutY="69.0" prefHeight="27.0" prefWidth="249.0" promptText="Pesquisar por nome fantansia..." />
+                        <Button layoutX="386.0" layoutY="69.0" mnemonicParsing="false" onAction="#btnBuscarForn" prefHeight="27.0" prefWidth="78.0" text="BUSCA" />
+                        <ButtonBar layoutX="26.0" layoutY="14.0" prefHeight="40.0" prefWidth="505.0">
+                            <buttons>
+                                <Button mnemonicParsing="false" onAction="#CadastrarNovoFornecedor" prefHeight="27.0" prefWidth="107.0" text="NOVO" />
+                                <Button minWidth="59.0" mnemonicParsing="false" onAction="#ConsultaFornecedor" prefHeight="27.0" prefWidth="107.0" text="CONSULTAR" />
+                                <Button mnemonicParsing="false" onAction="#AlterarFornecedor" prefWidth="107.0" text="ALTERAR" />
+                                <Button mnemonicParsing="false" onAction="#DeletarFornecedor" prefHeight="27.0" prefWidth="107.0" text="EXCLUIR" />
+                            </buttons>
+                        </ButtonBar>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+    </tabs>
+</TabPane>
